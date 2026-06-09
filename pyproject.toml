@@ -10,6 +10,7 @@ dependencies = [
     "langchain-community>=0.4.2",
     "langchain-core>=1.4.1",
     "langchain-google-genai>=4.2.4",
+    "langchain-groq>=1.1.2",
     "lxml>=6.1.1",
     "orjson>=3.11.9",
     "pydantic>=2.13.4",

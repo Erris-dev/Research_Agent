@@ -1,15 +1,16 @@
 from pyexpat import model
 from langchain_core.messages.block_translators import google_genai
 from langchain.agents import create_agent
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+import os
 
 from tools.tools import (search_web,scrape_url)
 from dotenv import load_dotenv
 load_dotenv()
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.2)
+llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.2, api_key=os.getenv(""))
 
 
 # Search Agent
